@@ -7,6 +7,9 @@ import ProductsPage from "./pages/ProductsPage";
 import CartPage from "./pages/CartPage";
 import AuthPage from "./Pages/AuthPage";
 import ProductDetailPage from "./Pages/ProductDetailPage";
+import Chatbot from "./components/Chatbot";
+import ProductAnalytics from "./Pages/ProductAnalytics";
+
 export default function App() {
   return (
     <ThemeProvider>
@@ -19,9 +22,11 @@ export default function App() {
             <Route path="/products/:id" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/auth" element={<AuthPage />} />
+            <Route path="/analytics" element={<ProductAnalytics />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
+      <Chatbot />
     </ThemeProvider>
   );
 }

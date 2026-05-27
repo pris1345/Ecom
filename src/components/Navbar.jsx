@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart, Sun, Moon, Store, LogIn, Menu, X } from "lucide-react";
 import { useCart } from "../contexts/CartContext";
 import { useTheme } from "../contexts/ThemeContext";
+import { Links } from "react-router-dom";
 
 export default function Navbar() {
   const { totalItems } = useCart();
@@ -68,6 +69,9 @@ export default function Navbar() {
             </Link>
             <Link to="/products" className={linkClass("/products")}>
               Products
+            </Link>
+            <Link to="/analytics" className={linkClass("/analytics")}>
+              Analytics
             </Link>
           </div>
 
